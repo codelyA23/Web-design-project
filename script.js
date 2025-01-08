@@ -20,6 +20,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Application Form Reset Functionality
+  const applicationForm = document.getElementById('applicationForm');
+  const resetBtn = applicationForm?.querySelector('.reset-btn');
+  
+  if (resetBtn && applicationForm) {
+    resetBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent the default reset behavior
+      
+      if (confirm('Are you sure you want to reset the form? All entered data will be lost.')) {
+        // Reset all form fields
+        applicationForm.reset();
+        
+        // Reset file inputs (they don't get cleared by form.reset())
+        const fileInputs = applicationForm.querySelectorAll('input[type="file"]');
+        fileInputs.forEach(input => {
+          input.value = '';
+        });
+        
+        // Reset select elements to first option
+        const selects = applicationForm.querySelectorAll('select');
+        selects.forEach(select => {
+          select.selectedIndex = 0;
+        });
+        
+        // Uncheck checkboxes
+        const checkboxes = applicationForm.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+          checkbox.checked = false;
+        });
+        
+        // Scroll to top of form
+        applicationForm.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
   // Resource Hub Functionality
   const searchInput = document.getElementById("search-input");
   const searchBtn = document.querySelector(".search-btn");

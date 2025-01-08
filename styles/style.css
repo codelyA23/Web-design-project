@@ -1402,11 +1402,6 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-section option {
-  background-color: var(--bg-color);
-  color: var(--main-color);
-}
-
 .enrollment-form h3 {
   font-size: 2.5rem;
   color: var(--main-color);
