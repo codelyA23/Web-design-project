@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Portal - CyberGirls Initiative</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Cyber<span>Girls</span></a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">Who We Are</a>
+        <a href="programs.html">Program Details</a>
+        <a href="stories.html">Success Stories</a>
+        <a href="mentors.html">Mentor Profiles</a>
+        <a href="enrollment.html">Enrollment</a>
+        <a href="resources.html">Resource Hub</a>
+        <a href="contact.html" class="gradient-btn">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="application-portal" id="application-portal">
+        <h2 class="heading">Program Application Portal</h2>
+
+        <div class="application-content">
+          <div class="application-form">
+            <form id="applicationForm" class="comprehensive-form">
+              <div class="form-section">
+                <h4>Personal Information</h4>
+                <div class="form-group">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                  <label for="dob">Date of Birth *</label>
+                  <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                  <label for="address">Address *</label>
+                  <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h4>Educational Background</h4>
+                <div class="form-group">
+                  <label for="education">Highest Level of Education *</label>
+                  <select id="education" name="education" required>
+                    <option value="">Select Education Level</option>
+                    <option value="high_school">High School</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="bachelors">Bachelor's Degree</option>
+                    <option value="masters">Master's Degree</option>
+                    <option value="phd">Ph.D.</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="institution">Current/Last Institution *</label>
+                  <input type="text" id="institution" name="institution" required>
+                </div>
+                <div class="form-group">
+                  <label for="field">Field of Study *</label>
+                  <input type="text" id="field" name="field" required>
+                </div>
+                <div class="form-group">
+                  <label for="gradYear">Graduation Year (Expected) *</label>
+                  <input type="number" id="gradYear" name="gradYear" min="2000" max="2030" required>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h4>Technical Background</h4>
+                <div class="form-group">
+                  <label for="experience">Programming Experience</label>
+                  <select id="experience" name="experience">
+                    <option value="">Select Experience Level</option>
+                    <option value="none">No Experience</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="skills">Technical Skills (if any)</label>
+                  <textarea id="skills" name="skills" rows="3" placeholder="List any relevant technical skills, programming languages, or tools you're familiar with"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="certifications">Certifications (if any)</label>
+                  <textarea id="certifications" name="certifications" rows="3" placeholder="List any relevant certifications or training programs completed"></textarea>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h4>Program Interest</h4>
+                <div class="form-group">
+                  <label for="track">Preferred Learning Track *</label>
+                  <select id="track" name="track" required>
+                    <option value="">Select Track</option>
+                    <option value="network_security">Network Security</option>
+                    <option value="application_security">Application Security</option>
+                    <option value="cloud_security">Cloud Security</option>
+                    <option value="incident_response">Incident Response</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="motivation">Why do you want to join this program? *</label>
+                  <textarea id="motivation" name="motivation" rows="4" required placeholder="Tell us about your motivation, career goals, and what you hope to achieve through this program"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="experience_description">Describe any relevant experience or projects *</label>
+                  <textarea id="experience_description" name="experience_description" rows="4" required placeholder="Share any projects, internships, or experiences that demonstrate your interest in cybersecurity"></textarea>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h4>Availability & Commitment</h4>
+                <div class="form-group">
+                  <label for="start_date">Preferred Start Date *</label>
+                  <input type="date" id="start_date" name="start_date" required>
+                </div>
+                <div class="form-group">
+                  <label for="commitment">Weekly Time Commitment *</label>
+                  <select id="commitment" name="commitment" required>
+                    <option value="">Select Hours per Week</option>
+                    <option value="10-15">10-15 hours</option>
+                    <option value="15-20">15-20 hours</option>
+                    <option value="20-25">20-25 hours</option>
+                    <option value="25+">25+ hours</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h4>Documents</h4>
+                <div class="form-group">
+                  <label for="resume">Resume/CV *</label>
+                  <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                  <small>Max file size: 5MB (PDF, DOC, or DOCX)</small>
+                </div>
+                <div class="form-group">
+                  <label for="coverLetter">Cover Letter *</label>
+                  <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" required>
+                  <small>Max file size: 5MB (PDF, DOC, or DOCX)</small>
+                </div>
+                <div class="form-group">
+                  <label for="certificates">Additional Certificates</label>
+                  <input type="file" id="certificates" name="certificates" accept=".pdf,.jpg,.jpeg,.png" multiple>
+                  <small>Max file size: 5MB each (PDF, JPG, JPEG, or PNG)</small>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="terms" name="terms" required>
+                  <label for="terms">I agree to the program terms and conditions *</label>
+                </div>
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="privacy" name="privacy" required>
+                  <label for="privacy">I consent to the processing of my personal data *</label>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="reset" class="reset-btn" style="background: palevioletred;
+                padding: 5px;
+                border-radius: 5px;
+                outline: none;
+                border: none;">Reset Form</button>
+                <button type="submit" class="submit-btn">Submit Application</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="application-sidebar">
+            <div class="info-box">
+              <h4><i class='bx bx-info-circle'></i> Application Tips</h4>
+              <ul>
+                <li>Complete all required fields marked with *</li>
+                <li>Be specific about your goals and motivation</li>
+                <li>Proofread before submitting</li>
+                <li>Ensure documents are clear and up-to-date</li>
+              </ul>
+            </div>
+
+            <div class="info-box">
+              <h4><i class='bx bx-help-circle'></i> Need Help?</h4>
+              <p>If you have any questions or need assistance, please contact our support team:</p>
+              <a href="mailto:support@cybergirls.com" class="support-link">
+                <i class='bx bx-envelope'></i> support@cybergirls.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="bx bx-shield-quarter"></i>
+            <h3>CyberGirls</h3>
+          </div>
+          <p>Empowering the next generation of cybersecurity leaders.</p>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-linkedin" title="linkedin"></i></a>
+            <a href="#"><i class="bx bxl-twitter" title="twitter"></i></a>
+            <a href="#"><i class="bx bxl-github" title="github"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="programs.html">Fundamentals</a></li>
+            <li><a href="programs.html">Ethical Hacking</a></li>
+            <li><a href="programs.html">Network Security</a></li>
+            <li><a href="programs.html">Advanced Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="resources.html">Learning Materials</a></li>
+            <li><a href="resources.html">Tools</a></li>
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="stories.html">Success Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in Touch</a></li>
+            <li><a href="enrollment.html">Enroll Now</a></li>
+            <li>
+              <a href="mailto:contact@cybergirls.org">contact@cybergirls.org</a>
+            </li>
+            <li><a href="tel:(123)456-7890">(123) 456-7890</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="text-align: center; font-size: 1.2rem">&copy 2024 CyberGirls. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

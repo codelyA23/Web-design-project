@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Marquee</title>
+    <style>
+
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .marquee-content {
+            display: inline-flex;
+            animation: marquee 30s linear infinite;
+        }
+
+        .marquee-content.reverse {
+            animation: marquee-reverse 30s linear infinite;
+        }
+
+        .marquee-item, .company-item {
+            display: flex;
+            align-items: center;
+            padding: 0 3rem;
+            flex-shrink: 0;
+        }
+
+        .company-item {
+            padding: 0 4rem;
+        }
+
+        .marquee-item i {
+            font-size: 2.5rem;
+            color: #009FFF;
+            margin-right: 1rem;
+        }
+
+        .company-item img {
+            height: 40px;
+            width: auto;
+            margin-right: 1.5rem;
+        }
+
+        .marquee-item span {
+            font-size: 1.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .company-item span {
+            font-size: 2rem;
+            font-weight: 600;
+            white-space: nowrap;
+            background: linear-gradient(45deg, #009FFF, #ec2F4B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes marquee-reverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        .marquee-container::before,
+        .marquee-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .marquee-container::before {
+            left: 0;
+            background: linear-gradient(to right, #081b29 20%, transparent);
+        }
+
+        .marquee-container::after {
+            right: 0;
+            background: linear-gradient(to left, #081b29 20%, transparent);
+        }
+
+        @media (max-width: 768px) {
+            .marquee-item span, .company-item span {
+                font-size: 1.4rem;
+            }
+            .marquee-item i, .company-item img {
+                font-size: 2rem;
+                height: 30px;
+            }
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Companies Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-content reverse">
+            <div class="company-item">
+                <img src="lim.svg" alt="Limkokwing University Logo">
+                <span>Limkokwing University</span>
+            </div>
+            <div class="company-item">
+                <img src="pam.svg" alt="IPAM Logo">
+                <span>IPAM</span>
+            </div>
+            <div class="company-item">
+                <img src="fbc.svg" alt="FBC Logo">
+                <span>FBC</span>
+            </div>
+            <!-- Duplicate items for seamless loop -->
+            <div class="company-item">
+                <img src="lim.svg" alt="Limkokwing University Logo">
+                <span>Limkokwing University</span>
+            </div>
+            <div class="company-item">
+                <img src="pam.svg" alt="IPAM Logo">
+                <span>IPAM</span>
+            </div>
+            <div class="company-item">
+                <img src="fbc.svg" alt="FBC Logo">
+                <span>FBC</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Awards Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <div class="marquee-item">
+                <i class='bx bx-award'></i>
+                <span>Best Tech Initiative 2023</span>
+            </div>
+            <div class="marquee-item">
+                <i class='bx bx-medal'></i>
+                <span>Excellence in STEM Education</span>
+            </div>
+            <div class="marquee-item">
+                <i class='bx bx-certification'></i>
+                <span>Innovation in Cybersecurity</span>
+            </div>
+            <div class="marquee-item">
+                <i class='bx bx-trophy'></i>
+                <span>Women Empowerment Champion</span>
+            </div>
+            <!-- Duplicate items for seamless loop -->
+            <div class="marquee-item">
+                <i class='bx bx-award'></i>
+                <span>Best Tech Initiative 2023</span>
+            </div>
+            <div class="marquee-item">
+                <i class='bx bx-medal'></i>
+                <span>Excellence in STEM Education</span>
+            </div>
+            <div class="marquee-item">
+                <i class='bx bx-certification'></i>
+                <span>Innovation in Cybersecurity</span>
+            </div>
+            <div class="marquee-item">
+                <i class='bx bx-trophy'></i>
+                <span>Women Empowerment Champion</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+      </section>
+
+      <!-- Recognition Section -->
+      <section class="recognition" id="recognition">
+        <h2 class="heading">National Recognition</h2>
+    
+        <div class="recognition-text">
+            <p>CyberGirls has been honored with numerous awards and recognitions for our commitment to empowering women in cybersecurity. Our partnerships with leading institutions like Limkokwing University, IPAM, and FBC have strengthened our ability to provide world-class education and training opportunities.</p>
+            <p>Through these collaborations, we've successfully trained over 500 women, with many graduates now working in prestigious cybersecurity positions across the country. Our initiative continues to set new standards in technology education and women's empowerment.</p>
+        </div>
+
+        <!-- Companies Marquee -->
+        <div class="marquee-container">
+            <div class="marquee-content reverse">
+                <div class="company-item">
+                    <img src="lim.svg" alt="Limkokwing University Logo">
+                    <span>Limkokwing University</span>
+                </div>
+                <div class="company-item">
+                    <img src="pam.svg" alt="IPAM Logo">
+                    <span>IPAM</span>
+                </div>
+                <div class="company-item">
+                    <img src="fbc.svg" alt="FBC Logo">
+                    <span>FBC</span>
+                </div>
+                <!-- Duplicate items for seamless loop -->
+                <div class="company-item">
+                    <img src="lim.svg" alt="Limkokwing University Logo">
+                    <span>Limkokwing University</span>
+                </div>
+                <div class="company-item">
+                    <img src="pam.svg" alt="IPAM Logo">
+                    <span>IPAM</span>
+                </div>
+                <div class="company-item">
+                    <img src="fbc.svg" alt="FBC Logo">
+                    <span>FBC</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Awards Marquee -->
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <div class="marquee-item">
+                    <i class='bx bx-award'></i>
+                    <span>Best Tech Initiative 2023</span>
+                </div>
+                <div class="marquee-item">
+                    <i class='bx bx-medal'></i>
+                    <span>Excellence in STEM Education</span>
+                </div>
+                <div class="marquee-item">
+                    <i class='bx bx-certification'></i>
+                    <span>Innovation in Cybersecurity</span>
+                </div>
+                <div class="marquee-item">
+                    <i class='bx bx-trophy'></i>
+                    <span>Women Empowerment Champion</span>
+                </div>
+                <!-- Duplicate items for seamless loop -->
+                <div class="marquee-item">
+                    <i class='bx bx-award'></i>
+                    <span>Best Tech Initiative 2023</span>
+                </div>
+                <div class="marquee-item">
+                    <i class='bx bx-medal'></i>
+                    <span>Excellence in STEM Education</span>
+                </div>
+                <div class="marquee-item">
+                    <i class='bx bx-certification'></i>
+                    <span>Innovation in Cybersecurity</span>
+                </div>
+                <div class="marquee-item">
+                    <i class='bx bx-trophy'></i>
+                    <span>Women Empowerment Champion</span>
+                </div>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+
+
+<section class="recognition" id="recognition">
+    <h2 class="heading">National Recognition</h2>
+    
+    <div class="recognition-text">
+        <p>CyberGirls has been honored with numerous awards and recognitions for our commitment to empowering women in cybersecurity. Our partnerships with leading institutions like Limkokwing University, IPAM, and FBC have strengthened our ability to provide world-class education and training opportunities.</p>
+        <p>Through these collaborations, we've successfully trained over 500 women, with many graduates now working in prestigious cybersecurity positions across the country. Our initiative continues to set new standards in technology education and women's empowerment.</p>
+    </div>
+
+    <style>
+        .recognition-text {
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .recognition-text p {
+            color: #ededed;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .recognition-text {
+                padding: 0 1rem;
+            }
+            .recognition-text p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+  </section>

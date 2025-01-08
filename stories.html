@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberGirls Initiative</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Recognition Section Styles */
+      .recognition {
+        padding: 2rem 9%;
+      }
+
+      .award-item {
+        display: inline-flex;
+        align-items: center;
+        margin: 0 3rem;
+        font-size: 1.6rem;
+        color: var(--text-color);
+      }
+
+      .award-item i {
+        font-size: 2.5rem;
+        color: var(--main-color);
+        margin-right: 1rem;
+      }
+
+      .recognition-box {
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 20px;
+        padding: 3rem 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .recognition-box:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .recognition-box i {
+        font-size: 4rem;
+        color: var(--main-color);
+        margin-bottom: 2rem;
+      }
+
+      .recognition-box h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--white);
+      }
+
+      .recognition-box p {
+        font-size: 1.4rem;
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      /* Media Queries for Recognition Section */
+      @media (max-width: 768px) {
+        .recognition-container {
+          grid-template-columns: 1fr;
+        }
+
+        .award-item {
+          margin: 0 2rem;
+          font-size: 1.4rem;
+        }
+      }
+      .marquee-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        padding: 2rem 0;
+      }
+
+      .marquee-content {
+        display: inline-flex;
+        animation: marquee 30s linear infinite;
+      }
+
+      .marquee-content.reverse {
+        animation: marquee-reverse 30s linear infinite;
+      }
+
+      .marquee-item,
+      .company-item {
+        display: flex;
+        align-items: center;
+        padding: 0 3rem;
+        flex-shrink: 0;
+      }
+
+      .company-item {
+        padding: 0 4rem;
+      }
+
+      .marquee-item i {
+        font-size: 2.5rem;
+        color: #009fff;
+        margin-right: 1rem;
+      }
+
+      .company-item img {
+        height: 40px;
+        width: auto;
+        margin-right: 1.5rem;
+      }
+
+      .marquee-item span {
+        font-size: 1.8rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .company-item span {
+        font-size: 2rem;
+        font-weight: 600;
+        white-space: nowrap;
+        background: linear-gradient(45deg, #009fff, #ec2f4b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes marquee-reverse {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .marquee-container:hover .marquee-content {
+        animation-play-state: paused;
+      }
+
+      .marquee-container::before,
+      .marquee-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        z-index: 2;
+      }
+
+      .marquee-container::before {
+        left: 0;
+        background: linear-gradient(to right, #081b29 20%, transparent);
+      }
+
+      .marquee-container::after {
+        right: 0;
+        background: linear-gradient(to left, #081b29 20%, transparent);
+      }
+
+      @media (max-width: 768px) {
+        .marquee-item span,
+        .company-item span {
+          font-size: 1.4rem;
+        }
+        .marquee-item i,
+        .company-item img {
+          font-size: 2rem;
+          height: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Cyber<span>Girls</span></a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">Who We Are</a>
+        <a href="programs.html">Program Details</a>
+        <a href="stories.html" class="active-page">Success Stories</a>
+        <a href="mentors.html">Mentor Profiles</a>
+        <a href="enrollment.html">Enrollment</a>
+        <a href="resources.html" class="resource-for-margin-right"
+          >Resource Hub</a
+        >
+        <a href="contact.html" class="gradient-btn">Contact Us</a>
+      </nav>
+    </header>
+    <main>
+      <section class="success-stories" id="success-stories">
+        <h4 class="heading">Success Stories</h4>
+
+        <div class="testimonial-wrapper">
+          <input type="radio" name="slider" id="slide1" checked />
+          <input type="radio" name="slider" id="slide2" />
+          <input type="radio" name="slider" id="slide3" />
+
+          <div class="testimonial-cards">
+            <div class="testimonial-card">
+              <img src="assets/participant1.jpg" alt="Participant 1" />
+              <blockquote>
+                "Joining Cyber Girls changed my life! I went from having no tech
+                background to securing a job as a cybersecurity analyst."
+              </blockquote>
+              <h4>- Aisha Kamara</h4>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="assets/participant2.jpg" alt="Participant 2" />
+              <blockquote>
+                "The hands-on experience and mentorship prepared me to work
+                confidently in a male-dominated field. I'm now a network
+                security engineer."
+              </blockquote>
+              <h4>- Fatmata Conteh</h4>
+            </div>
+
+            <div class="testimonial-card">
+              <img src="assets/participant3.jpg" alt="Participant 3" />
+              <blockquote>
+                "Cyber Girls empowered me to pursue ethical hacking, and today,
+                I help companies stay secure against threats."
+              </blockquote>
+              <h4>- Mariama Bangura</h4>
+            </div>
+          </div>
+
+          <div class="arrows">
+            <label for="slide3" class="arrow prev" id="prev1">&#10094;</label>
+            <label for="slide2" class="arrow next" id="next1">&#10095;</label>
+
+            <label for="slide1" class="arrow prev" id="prev2">&#10094;</label>
+            <label for="slide3" class="arrow next" id="next2">&#10095;</label>
+
+            <label for="slide2" class="arrow prev" id="prev3">&#10094;</label>
+            <label for="slide1" class="arrow next" id="next3">&#10095;</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recognition Section -->
+      <section class="recognition" id="recognition">
+        <h4 class="heading">National Recognition</h4>
+
+        <div class="recognition-container">
+          <p class="recognition-text one">
+            We are proud to collaborate with industry-leading institutions that share our vision 
+            of empowering women in cybersecurity. Our strategic partnerships with 
+            <span class="company-name">Limkokwing University</span>,
+            <span class="company-name">IPAM</span>, and
+            <span class="company-name">FBC</span> have enabled us to create comprehensive 
+            training programs, provide state-of-the-art resources, and offer unparalleled 
+            learning opportunities to our students.</p>
+        </div>
+
+        <!-- Companies Marquee -->
+        <div class="marquee-container">
+          <div class="marquee-content reverse">
+            <div class="company-item">
+              <img src="lim.svg" alt="Limkokwing University Logo" />
+              <span>Limkokwing University</span>
+            </div>
+            <div class="company-item">
+              <img src="pam.svg" alt="IPAM Logo" />
+              <span>IPAM</span>
+            </div>
+            <div class="company-item">
+              <img src="fbc.svg" alt="FBC Logo" />
+              <span>FBC</span>
+            </div>
+            <!-- Duplicate items for seamless loop -->
+            <div class="company-item">
+              <img src="lim.svg" alt="Limkokwing University Logo" />
+              <span>Limkokwing University</span>
+            </div>
+            <div class="company-item">
+              <img src="pam.svg" alt="IPAM Logo" />
+              <span>IPAM</span>
+            </div>
+            <div class="company-item">
+              <img src="fbc.svg" alt="FBC Logo" />
+              <span>FBC</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="recognition-text two">
+          Our commitment to excellence has earned us numerous accolades in the field of 
+          cybersecurity education. We've been recognized with the <span class="award-name">National Innovation Award</span>, 
+          <span class="award-name"> Excellence in Tech Education Award</span>, and the prestigious 
+          <span class="award-name">Women in Tech Empowerment Award</span>. These honors reflect our dedication 
+          to maintaining the highest standards in cybersecurity training and our impact in creating 
+          a more diverse tech workforce.
+        </p>
+
+        <!-- Awards Marquee -->
+        <div class="marquee-container">
+          <div class="marquee-content">
+            <div class="marquee-item">
+              <i class="bx bx-award"></i>
+              <span>Best Tech Initiative 2023</span>
+            </div>
+            <div class="marquee-item">
+              <i class="bx bx-medal"></i>
+              <span>Excellence in STEM Education</span>
+            </div>
+            <div class="marquee-item">
+              <i class="bx bx-certification"></i>
+              <span>Innovation in Cybersecurity</span>
+            </div>
+            <div class="marquee-item">
+              <i class="bx bx-trophy"></i>
+              <span>Women Empowerment Champion</span>
+            </div>
+            <!-- Duplicate items for seamless loop -->
+            <div class="marquee-item">
+              <i class="bx bx-award"></i>
+              <span>Best Tech Initiative 2023</span>
+            </div>
+            <div class="marquee-item">
+              <i class="bx bx-medal"></i>
+              <span>Excellence in STEM Education</span>
+            </div>
+            <div class="marquee-item">
+              <i class="bx bx-certification"></i>
+              <span>Innovation in Cybersecurity</span>
+            </div>
+            <div class="marquee-item">
+              <i class="bx bx-trophy"></i>
+              <span>Women Empowerment Champion</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="bx bx-shield-quarter"></i>
+            <h3>CyberGirls</h3>
+          </div>
+          <p>Empowering the next generation of cybersecurity leaders.</p>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-linkedin" title="linkedin"></i></a>
+            <a href="#"><i class="bx bxl-twitter" title="twitter"></i></a>
+            <a href="#"><i class="bx bxl-github" title="github"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="programs.html">Fundamentals</a></li>
+            <li><a href="programs.html">Ethical Hacking</a></li>
+            <li><a href="programs.html">Network Security</a></li>
+            <li><a href="programs.html">Advanced Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="resources.html">Learning Materials</a></li>
+            <li><a href="resources.html">Tools</a></li>
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="stories.html">Success Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in Touch</a></li>
+            <li><a href="enrollment.html">Enroll Now</a></li>
+            <li>
+              <a href="mailto:contact@cybergirls.org">contact@cybergirls.org</a>
+            </li>
+            <li><a href="tel:(123)456-7890">(123) 456-7890</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="text-align: center; font-size: 1.2rem">&copy 2024 CyberGirls. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
