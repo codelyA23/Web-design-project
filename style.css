@@ -1772,6 +1772,20 @@ header {
   transform: scale(1.2) translateY(-5px);
 }
 
+.contact-details .social-icons {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-details .social-icons h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* contact us ends here */
 
 /* =========================== */
@@ -2726,5 +2740,40 @@ main {
   
   .form-actions button {
     width: 100%;
+  }
+}
+
+/* Map styling */
+.map-container {
+  margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+}
+
+.map-container h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .map-wrapper {
+    height: 350px;
   }
 }

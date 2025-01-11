@@ -1654,11 +1654,6 @@ header {
 .contact-form textarea::placeholder {
   color: #888;
 }
-
-.contact-form .gradient-btn:hover {
-  transform: scale(1.05);
-}
-
 .contact-details p {
   font-size: 1.8rem;
   line-height: 2.5rem;
